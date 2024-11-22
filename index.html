@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Season</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #29293d;
+        }
+        .container{
+            margin: 20px auto;
+            width : 300px;
+            background-color: #8585ad;
+            padding :20px;
+            border-radius:10px ;
+            
+
+
+        }
+        #bulb{
+            width : 80%;
+            display:block;
+            margin: 20px auto;
+
+        }
+        .app-heading{
+            color:#fff;
+            text-align : center;
+        }
+
+        .btn{
+            border : none;
+            padding : 5px 20px;
+            border-radius:5px;
+            cursor: pointer;
+
+        }
+        .btn-group{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .btn-on
+        {
+            background-color: yellow;
+        }
+        .btn-off
+        {
+            background-color: #4d4d4d;
+        }
+        .btn-both
+        {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <h1 class="app-heading" id="app-heading">Season</h1>
+        <img src="jacket.png" alt="bulb" id="bulb">
+
+    
+
+    <div class="btn-group">
+        <button class="btn btn-off" onclick="off()">Winter</button>
+        <button class="btn btn-on" onclick="on()">Summer</button>
+        <button class="btn btn-both" onclick="both()">Rainy</button>
+    </div>
+    </div>
+    <script>
+        function on(){
+            const bulbImgElement = document.getElementById('bulb');
+            bulbImgElement.src = "sun.png";
+        
+    
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#ffb31a';
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#f0f0f0';
+
+            const appHeadElement = document.getElementById('app-heading');
+            appHeadElement.style.color = 'black';
+            
+        }
+        function off(){
+            const bulbImgElement = document.getElementById('bulb');
+            bulbImgElement.src = "jacket.png";
+        
+    
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#29293d';
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#8585ad';
+
+            const appHeadElement = document.getElementById('app-heading');
+            appHeadElement.style.color = '#fff';
+            
+        }
+        function both(){
+            const bulbImgElement = document.getElementById('bulb');
+            bulbImgElement.src = "weather.png";
+        
+    
+            const bodyElement = document.getElementById('body');
+            bodyElement.style.backgroundColor = '#BBE3E6';
+            const containerElement = document.getElementById('container');
+            containerElement.style.backgroundColor = '#2596BE';
+
+            const appHeadElement = document.getElementById('app-heading');
+            appHeadElement.style.color = '#fff';
+            
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
